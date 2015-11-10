@@ -19,8 +19,6 @@ LIBS = \
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-all: $(SOURCES) $(APP)
-    
 $(APP): $(OBJECTS) 
 	$(CC) -o $@ $(OBJECTS) $(LIBS)
 
