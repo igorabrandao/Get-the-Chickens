@@ -1,7 +1,7 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
 #include <stdexcept>
 #include "Game.h"
+
 int main(void)
 {
     // Tenta rodar o jogo

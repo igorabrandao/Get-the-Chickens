@@ -1,19 +1,26 @@
 #include "GameObject.h"
 
-GameObject::GameObject()
+void
+GameObject::setVelocity( sf::Vector2f velocity )
 {
-	/* Empty for while */
+	mVelocity = velocity;
 }
 
 void
-GameObject::setVelocity( sf::Vector2f _velocity )
+GameObject::setVelocity( float vx, float vy)
 {
-	velocity.x = _velocity.x;
-	velocity.y = _velocity.y;
+	mVelocity.x = vx;
+	mVelocity.y = vy;
 }
 
 sf::Vector2f
-GameObject::getVelocity()
+GameObject::getVelocity() const
 {
-	return velocity;
+	return mVelocity;
+}
+
+void
+GameObject::updateCurrent( sf::Time dt )
+{
+	move( mVelocity * dt.asSeconds() );
 }

@@ -1,17 +1,23 @@
 #ifndef GAME_OBJECT_H
 #define GAME_OBJECT_H
 
-#include <SFML/Graphics.hpp>
+// Entity.hpp
 
-class GameObject
+#include "SceneNode.h"
+
+
+class GameObject : public SceneNode
 {
 public:
-	GameObject();
-	void setVelocity(sf::Vector2f _velocity);
-	sf::Vector2f getVelocity();
+	void 			setVelocity( sf::Vector2f velocity );
+	void 			setVelocity( float vx, float vy );
+	sf::Vector2f 	getVelocity() const;
 
-public:
-	sf::Vector2f velocity;
+private:
+	virtual void 	updateCurrent( sf::Time dt );
+
+private:
+	sf::Vector2f 	mVelocity;
 };
 
-#endif
+#endif // GAME_OBJECT_H
