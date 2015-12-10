@@ -39,7 +39,7 @@ Buscamos utilizar uma estrutura mais rebuscada para o jogo como um todo, realiza
 
 **InputManager.h** => Gerencia eventos de entrada de teclado e outros periféricos.
 
-**LifeScreen.h (Principal)** => Trata os elementos que envolvem a mecânica da simulação.
+**LevelScreen.h (Principal)** => Constrói o cenário e implementa a jogabilidade
 
 **MenuManager.h** => Gera o menu do jogo de acordo com o arquivo de configuração.
 
